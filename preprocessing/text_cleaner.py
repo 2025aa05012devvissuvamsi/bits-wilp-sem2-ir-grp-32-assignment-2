@@ -11,6 +11,24 @@ import re
 from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer, WordNetLemmatizer
 
+def _ensure_nltk_data():
+    """Download required NLTK corpora if not already present (e.g. on a
+    fresh Streamlit Cloud environment, which has no persistent disk state
+    between deploys)."""
+    required = [
+        ("corpora/stopwords", "stopwords"),
+        ("corpora/wordnet", "wordnet"),
+        ("corpora/omw-1.4", "omw-1.4"),
+    ]
+    for path, package in required:
+        try:
+            nltk.data.find(path)
+        except LookupError:
+            nltk.download(package, quiet=True)
+
+
+_ensure_nltk_data()
+
 STOPWORDS = set(stopwords.words("english"))
 _stemmer = PorterStemmer()
 _lemmatizer = WordNetLemmatizer()
