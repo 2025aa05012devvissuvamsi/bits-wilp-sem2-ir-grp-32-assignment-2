@@ -1,0 +1,50 @@
+3D publishing concerns the production and distribution of content for 3D printers. 3D publishing holds the promise of an industry for the creation and distribution of files for the production of 3D objects, or physibles.
+Any individual or organisation producing files for 3D printers can be considered a 3D publisher. With the advent of specialist software, scanners and cloud based tools, access to 3D publishing is spreading fast. The development of online tools to facilitate and monetize publishing is bringing a new industry to fruition. Boundaries between value chains are disappearing, leading to new business models. 
+While 3D publishing and 3D publishers are fairly new concepts, the space is developing rapidly along with related 3D printing technology.
+
+
+== Business models ==
+Free distribution
+Anyone can upload 3D models to a site and anybody can download the model and 3D print at home for free. For example: Thingiverse, Pinshape, Youmagine, MyMiniFactory, Clara.io, Threeding.
+
+Shopfront
+Shopfront services allow anyone to open a shop and upload their 3D models. Customers pay to get the 3D model printed via the 3D print services of these companies. The designers of the selected 3D models will get a fee.
+Examples: Shapeways, Ponoko, i.materialise, Sculpteo, MyMiniFactory, Threeding.
+
+Paid distribution
+Designers can upload designs and make them available for paid download for profit. For example: Pinshape.
+
+Hybrid
+In a hybrid model, the designer or company might make use of any of the above services and/or local 3D print bureau to create print to order models.
+
+
+== Ecosystem ==
+There are many 3D content strategies being developed as part of the growing industry of 3D printing. Companies that are not 3D printing specialists are entering the field. These may be companies who have existing content and brands that can be distributed as 3D models, or they may need tools that enable the secure and efficient distribution of content. Employees will be needed to create, select, edit and market 3D content as part of these companies' marketing strategies. In the near future, companies like IKEA may offer a database with accessories where the customer could pay, download and 3D print.
+A conference on 3D publishing was first held in the Netherlands in March 2013.
+
+
+== Software tools ==
+In order to create 3D models, one needs 3D software tools. There is a broad range of tools available from very simple tools on a tablet to very sophisticated engineering tools.
+
+
+== See also ==
+3D modeling
+3D scanner
+3D printing marketplace
+
+
+== References ==
+
+
+== External links ==
+The Coming Ecosystem of 3D Printing
+Introduction to 3d printing costs
+Structural optimisation of metallic components
+3D fabbers: don’t let the DMCA stifle an innovative future // Arstechnica, 2010-11-10
+3-D printing at MIT
+3D Printing: The Printed World from The Economist
+3D Printer News and Updates from Industry
+3D Printing Industry News
+New 3D design and mind
+Overview of recent 3D printing applications (from Dezeen magazine)
+Will 3D Printing Change the World? Video produced by Off Book (web series)

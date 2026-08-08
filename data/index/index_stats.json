@@ -1,0 +1,11 @@
+{
+  "num_documents": 49,
+  "vocabulary_size": 13571,
+  "avg_postings_per_term": 3.238523321789109,
+  "tfidf_matrix_shape": [
+    49,
+    13558
+  ],
+  "graph_nodes": 49,
+  "graph_edges": 299
+}

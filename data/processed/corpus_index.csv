@@ -1,0 +1,50 @@
+doc_id,title,seed_source,depth
+doc_00001,Artificial intelligence,Artificial intelligence,0
+doc_00002,Machine learning,Machine learning,0
+doc_00003,Deep learning,Deep learning,0
+doc_00004,Neural network,Neural network,0
+doc_00005,Natural language processing,Natural language processing,0
+doc_00006,Computer vision,Computer vision,0
+doc_00007,Robotics,Robotics,0
+doc_00008,15.ai,Artificial intelligence,1
+doc_00009,Action potential,Neural network,1
+doc_00010,1 the Road,Natural language processing,1
+doc_00011,2D to 3D conversion,Computer vision,1
+doc_00012,1X Technologies,Robotics,1
+doc_00013,2008 financial crisis,Machine learning,1
+doc_00014,ACT-R,Deep learning,1
+doc_00015,Activation function,Neural network,1
+doc_00016,3D modeling,Natural language processing,1
+doc_00017,3D microfabrication,Robotics,1
+doc_00018,2001: A Space Odyssey,Artificial intelligence,1
+doc_00019,AAAI Conference on Artificial Intelligence,Machine learning,1
+doc_00020,AI-assisted software development,Deep learning,1
+doc_00021,Adaptive control,Neural network,1
+doc_00023,3D printing,Robotics,1
+doc_00024,2001: A Space Odyssey (novel),Artificial intelligence,1
+doc_00025,ACM Computing Classification System,Machine learning,1
+doc_00026,AI agent,Deep learning,1
+doc_00027,Alexander Bain (philosopher),Neural network,1
+doc_00028,3D object recognition,Computer vision,1
+doc_00029,3D publishing,Robotics,1
+doc_00030,2024 Indian general election,Artificial intelligence,1
+doc_00031,ACM Computing Surveys,Machine learning,1
+doc_00032,AI alignment,Deep learning,1
+doc_00033,Artificial neuron,Neural network,1
+doc_00034,AI-complete,Natural language processing,1
+doc_00035,3D pose estimation,Computer vision,1
+doc_00036,ABB,Robotics,1
+doc_00037,3D optical data storage,Artificial intelligence,1
+doc_00038,AI anthropomorphism,Deep learning,1
+doc_00039,Backpropagation,Neural network,1
+doc_00040,3D reconstruction,Computer vision,1
+doc_00041,AC motor,Robotics,1
+doc_00042,A* search algorithm,Artificial intelligence,1
+doc_00043,ADALINE,Machine learning,1
+doc_00044,AI boom,Deep learning,1
+doc_00045,Biocybernetics,Neural network,1
+doc_00046,3D reconstruction from multiple images,Computer vision,1
+doc_00047,AI art,Robotics,1
+doc_00048,A.I. Artificial Intelligence,Artificial intelligence,1
+doc_00049,AI bubble,Deep learning,1
+doc_00050,Neural network (biology),Neural network,1

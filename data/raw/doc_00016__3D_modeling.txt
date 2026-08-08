@@ -1,0 +1,135 @@
+In 3D computer graphics, 3D modeling is the process of developing a mathematical coordinate-based representation of a surface of an object (inanimate or living) in three dimensions via specialized software by manipulating edges, vertices, and polygons in a simulated 3D space.
+Three-dimensional (3D) models represent a physical body using a collection of points in 3D space, connected by various geometric entities such as triangles, lines, curved surfaces, etc. Being a collection of data (points and other information), 3D models can be created manually, algorithmically (procedural modeling), or by scanning. Their surfaces may be further defined with texture mapping.
+
+
+== Outline ==
+
+The product is called a 3D model, while someone who works with 3D models may be referred to as a 3D artist or a 3D modeler.
+A 3D model can also be displayed as a two-dimensional image through a process called 3D rendering or used in a computer simulation of physical phenomena.
+3D models may be created automatically or manually. The manual modeling process of preparing geometric data for 3D computer graphics is similar to plastic arts such as sculpting. The 3D model can be physically created using 3D printing devices that form 2D layers of the model with three-dimensional material, one layer at a time. Without a 3D model, a 3D print is not possible.
+3D modeling software is a class of 3D computer graphics software used to produce 3D models. Individual programs of this class are called modeling applications.
+
+
+== History ==
+
+3D models are now widely used anywhere in 3D graphics and CAD but their history predates the widespread use of 3D graphics on personal computers.
+In the past, many computer games used pre-rendered images of 3D models as sprites before computers could render them in real-time. The designer can then see the model in various directions and views. This can help the designer see if the object is created as intended to compared to their original vision. Seeing the design this way can help the designer or company figure out changes or improvements needed to the product. Simple wireframes were the first versions of early 3D models, which were mainly used to view construction plans and mechanical parts. Better graphics hardware and software allowed for the creation of solid and surface models in the 1970s and 1980s, giving designers a more realistic and clear representation of physical objects. By the 1990s, parametric modeling became popular, letting designers change a model by changing its basic parameters instead of redrawing it from scratch. Thanks to virtual reality, artificial intelligence and generative design tools, 3D modeling today goes past engineering and is influencing fields like animation, gaming, product design and cinema.
+
+
+=== Representation ===
+
+Almost all 3D models can be divided into two categories:
+
+Solid – These models define the volume of the object they represent (like a rock). Solid models are mostly used for engineering and medical simulations, and are usually built with constructive solid geometry.
+Shell or boundary – These models represent the surface, i.e., the boundary of the object, not its volume (like an infinitesimally thin eggshell). Almost all visual models used in games and film are shell models.
+Solid and shell modeling can create functionally identical objects. Differences between them are mostly variations in the way they are created and edited and conventions of use in various fields and differences in types of approximations between the model and reality.
+Shell models must be manifold (having no holes or cracks in the shell) to be meaningful as a real object. For example, in a shell model of a cube, all six sides must be connected with no gaps in the edges or the corners. Polygonal meshes (and to a lesser extent, subdivision surfaces) are by far the most common representation. Level sets are a useful representation for deforming surfaces that undergo many topological changes, such as fluids.
+The process of transforming representations of objects, such as the middle point coordinate of a sphere and a point on its circumference, into a polygon representation of a sphere is called tessellation. This step is used in polygon-based rendering, where objects are broken down from abstract representations ("primitives") such as spheres, cones etc., to so-called meshes, which are nets of interconnected triangles. Meshes of triangles (instead of e.g., squares) are popular as they have proven to be easy to rasterize (the surface described by each triangle is planar, so the projection is always convex). Polygon representations are not used in all rendering techniques, and in these cases the tessellation step is not included in the transition from abstract representation to rendered scene.
+
+
+== Process ==
+There are four popular ways to represent a model:
+
+Parametric modeling – A feature-based parametric modeling structure, which relies on parent-child relationships between features, allowing for a number of methods for building specific models in the context of mechanical CAD systems.
+Polygonal modeling – Points in 3D space, called vertices, are connected by line segments to form a polygon mesh. The vast majority of 3D models today are built as textured polygonal models because they are flexible and because computers can render them so quickly. However, polygons are planar and can only approximate curved surfaces using many polygons.
+Curve modeling – Surfaces are defined by curves, which are influenced by weighted control points. The curve follows (but does not necessarily interpolate) the points. Increasing the weight for a point pulls the curve closer to that point. Curve types include nonuniform rational B-spline (NURBS), splines, patches, and geometric primitives.
+Digital sculpting – There are three types of digital sculpting: Displacement, which is the most widely used among applications at this moment, uses a dense model (often generated by subdivision surfaces of a polygon control mesh) and stores new locations for the vertex positions through use of an image map that stores the adjusted locations. Volumetric, loosely based on voxels, has similar capabilities as displacement but does not suffer from polygon stretching when there are not enough polygons in a region to achieve a deformation. Dynamic tessellation, which is similar to voxel, divides the surface using triangulation to maintain a smooth surface and allow finer details. These methods allow for artistic exploration as the model has new topology created over it once the models form and possibly details have been sculpted. The new mesh usually has the original high-resolution mesh information transferred into displacement data or normal map data if it is for a game engine.
+
+The modeling stage consists of shaping individual objects that are later used in the scene. There are a number of modeling techniques, including:
+
+Constructive solid geometry
+Implicit surfaces
+Subdivision surfaces
+Modeling can be performed by means of a dedicated program (e.g., 3D modeling software like Adobe Substance, Blender, Cinema 4D, LightWave, Maya, Modo, 3ds Max, SketchUp,  Rhinoceros 3D, and others) or an application component (Shaper, Lofter in 3ds Max) or some scene description language (as in POV-Ray). In some cases, there is no strict distinction between these phases; in such cases, modeling is just part of the scene creation process (this is the case, for example, with Caligari trueSpace and Realsoft 3D).
+3D models can also be created using the technique of Photogrammetry with dedicated programs such as RealityCapture, Metashape and 3DF Zephyr. Cleanup and further processing can be performed with applications such as MeshLab, the GigaMesh Software Framework, netfabb or MeshMixer. Photogrammetry creates models using algorithms to interpret the shape and texture of real-world objects and environments based on photographs taken from many angles of the subject.
+Complex materials such as blowing sand, clouds, and liquid sprays are modeled with particle systems, and are a mass of 3D coordinates which have either points, polygons, texture splats or sprites assigned to them.
+
+
+== 3D modeling software ==
+
+There are a variety of 3D modeling programs that can be used in the industries of engineering, interior design, film and others. Each 3D modeling software has specific capabilities and can be utilized to fulfill demands for the industry.
+
+
+=== G-code ===
+Many programs include export options to form a g-code, applicable to additive or subtractive manufacturing machinery. G-code (computer numerical control) works with automated technology to form a real-world rendition of 3D models. This code is a specific set of instructions to carry out steps of a product's manufacturing.
+
+
+=== Human models ===
+
+The first widely available commercial application of human virtual models appeared in 1998 on the Lands' End web site. The human virtual models were created by the company My Virtual Mode Inc. and enabled users to create a model of themselves and try on 3D clothing. There are several modern programs that allow for the creation of virtual human models (Poser being one example).
+
+
+=== 3D clothing ===
+
+The development of cloth simulation software such as Marvelous Designer, CLO3D and Optitex, has enabled artists and fashion designers to model dynamic 3D clothing on the computer.
+Dynamic 3D clothing is used for virtual fashion catalogs, as well as for dressing 3D characters for video games, 3D animation movies, for digital doubles in movies, as a creation tool for digital fashion brands, as well as for making clothes for avatars in virtual worlds such as SecondLife.
+
+
+== Comparison with 2D methods ==
+3D photorealistic effects are often achieved without wire-frame modeling and are sometimes indistinguishable in the final form. Some graphic art software includes filters that can be applied to 2D vector graphics or 2D raster graphics on transparent layers.
+Advantages of wireframe 3D modeling over exclusively 2D methods include:
+
+Flexibility, ability to change angles or animate images with quicker rendering of the changes;
+Ease of rendering, automatic calculation and rendering photorealistic effects rather than mentally visualizing or estimating;
+Accurate photorealism, less chance of human error in misplacing, overdoing, or forgetting to include a visual effect.
+Disadvantages compared to 2D photorealistic rendering may include a software learning curve and difficulty achieving certain photorealistic effects. Some photorealistic effects may be achieved with special rendering filters included in the 3D modeling software. For the best of both worlds, some artists use a combination of 3D modeling followed by editing the 2D computer-rendered images from the 3D model.
+
+
+== 3D model market ==
+A large market for 3D models (as well as 3D-related content, such as textures, scripts, etc.) exists—either for individual models or large collections. Several online marketplaces for 3D content allow individual artists to sell content that they have created, including TurboSquid, MyMiniFactory,Patreon,Sketchfab, CGTrader, and Cults. Often, the artists' goal is to get additional value out of assets they have previously created for projects. By doing so, artists can earn more money out of their old content, and companies can save money by buying pre-made models instead of paying an employee to create one from scratch. These marketplaces typically split the sale between themselves and the artist that created the asset, artists get 40% to 95% of the sales according to the marketplace. In most cases, the artist retains ownership of the 3D model while the customer only buys the right to use and present the model. Some artists sell their products directly in their own stores, offering their products at a lower price by not using intermediaries.
+The architecture, engineering and construction (AEC) industry is the biggest market for 3D modeling, with an estimated value of $12.13 billion by 2028. This is due to the increasing adoption of 3D modeling in the AEC industry, which helps to improve design accuracy, reduce errors and omissions and facilitate collaboration among project stakeholders.
+Over the last several years numerous marketplaces specializing in 3D rendering and printing models have emerged. Some of the 3D printing marketplaces are a combination of models sharing sites, with or without a built in e-com capability. Some of those platforms also offer 3D printing services on demand, software for model rendering and dynamic viewing of items.
+
+
+== 3D printing ==
+
+The term 3D printing or three-dimensional printing is a form of additive manufacturing technology where a three-dimensional object is created from successive layers of material. Objects can be created without the need for complex and expensive molds or assembly of multiple parts. 3D printing allows ideas to be prototyped and tested without having to go through a more time-consuming production process.
+3D models can be purchased from online markets and printed by individuals or companies using commercially available 3D printers, enabling the home-production of objects such as spare parts and even medical equipment.
+
+
+== Uses ==
+
+3D modeling is used in many industries.
+
+The medical industry uses detailed models of organs created from multiple two-dimensional image slices from an MRI or CT scan. Other scientific fields can use 3D models to visualize and communicate information such as models of chemical compounds. It is also utilized to create patient specific models. These models are used for pre-operative planning, implant design and surgical guides. It is often used in tandem with 3d printing to produce anatomical models and cutting templates.
+The movie industry uses 3D models for computer-generated characters and objects in animated and real-life motion pictures. Similarly, the video game industry uses 3D models as assets for computer and video games. The source of the geometry for the shape of an object can be a designer, industrial engineer, or artist using a 3D CAD system; an existing object that has been reverse engineered or copied using a 3D shape digitizer or scanner; or mathematical data based on a numerical description or calculation of the object.
+The architecture industry uses 3D models to demonstrate proposed buildings and landscapes in lieu of traditional, physical architectural models. Additionally, the use of Level of Detail (LOD) in 3D models is becoming increasingly important in architecture, engineering and construction (AEC). 3D modeling is also utilized in massing, BIM workflows, clash detection, and visualization. This can provide an idea about the design intent to the stakeholders and connects to downstream fabrication via CNC and additive manufacturing.
+Archeologists create 3D models of cultural heritage items for research and visualization. For example, the International Institute of MetaNumismatics (INIMEN) studies the applications of 3D modeling for the digitization and preservation of numismatic artifacts. Moreover, photogrammetry and laser scanning support documentation of objects. It is used to conserve heritage and provide access to the public. Virtual reconstruction of items allows fragile artifacts to be studied without the risk of physically damaging them and to exhibit them on interactive sites or museums.
+In recent decades, the earth science community has started to construct 3D geological models as a standard practice. Analysis of groundwater, hazards and land-use change can be identified through using 3D terrain and subsurface models to integrate remote sensing and field data. 3D modelling tools create these models for planning and educational purposes.
+3D models are also used in constructing digital representations of mechanical parts before they are manufactured. Using CAD- and CAM-related software, an engineer can test the functionality of assemblies of parts then use the same data to create toolpaths for CNC machining or 3D printing. It allows digital prototyping and simulation into product lines which improves the efficiency and reduces the waste of the process. It introduces tighter integration with digital twins and model based definition (MBD) as well as additive workflows.
+3D modeling is used in industrial design, wherein products are 3D modeled before representing them to the clients.
+In media and event industries, 3D modeling is used in stage and set design.
+In education, students' conceptual understanding has seen an improvement with the introduction of 3D models and animations especially in STEM classrooms. Structured exposure to the 3D modelling field can also foster creativity and spatial reasoning.
+In fashion and apparel, designers can test fit garments through body scanning and simulation to even check the drape and motion. This reduces waste and accelerates iterations and prototyping.
+Humanoid 3D models may be used in VTubing.
+Due to the fact that software ecosystems vary across domains, it is common to differentiate between digital content creation (DCC) tools (which consist of polygonal/ subdivision modelling, sculpting and rigging), CAD, CAM ( it is the parametric and solid modeling for mechanical design and manufacturing), BIM (which is building information modelling for AEC), and domain specific platforms (for example medical or geospatial). Open-source tools (for instance Blender, FreeCAD, MeshLab, OpenSCAD) coexist with commercial packages (some examples are: Autodesk Maya/3ds Max/Fusion 360, SolidWorks, CATIA, Cinema 4D, ZBrush, Rhino, Houdini, SketchUp, CLO 3D/Marvelous Designer, Revit, Archicad).
+The OWL 2 translation of the vocabulary of X3D can be used to provide semantic descriptions for 3D models, which is suitable for indexing and retrieval of 3D models by features such as geometry, dimensions, material, texture, diffuse reflection, transmission spectra, transparency, reflectivity, opalescence, glazes, varnishes and enamels (as opposed to unstructured textual descriptions or 2.5D virtual museums and exhibitions using Google Street View on Google Arts & Culture, for example). The RDF representation of 3D models can be used in reasoning, which enables intelligent 3D applications which, for example, can automatically compare two 3D models by volume.
+Overall, these examples are an illustration of 3D modelling being a tool of general purpose representational layer that creates a bridge between sensing to analysis, design, communication and fabrication.
+
+
+== Challenges and limitations ==
+Despite 3D modelling being widely adopted in various domains, several constraints shape how the technology is utilized. Access and cost remain an issue in many regions of the world. Commercial licences, training, and capable hardware can be difficult to find in select regions. It can also be out of reach for students and small studios that cannot afford it. Open-source ecosystems and school programs can aid in making this less of an issue, but availability and support are uneven which in turn creates an equity gap in who can learn and apply 3D modelling.
+Workflow complexity is another limitation. To practice 3D modelling effectively it requires knowledge of many different things. A 3D modelling specialist needs to understand topology, UV mapping, rigging, simulation and rendering for DCC. For CAD/CAM modelling parametric constraints, tolerances and manufacturing constraints must be known by the developer. Information schema and coordination are both required for BIM. Moving assets between tools can introduce incompatibility issues (meshes vs. NURBS/solids/parametric features; unit scaling; normals; material definitions), and format conversions may cause data loss without careful management.
+At scale, energy consumption can be large (this is due to high resolution simulations and rendering and dense 3D scans), which directs teams to try and optimize design complexity and adopting more efficient pipelines. In research and heritage work, there is another constraint where ethical and policy questions include provenance, licensing and representation (how “authoritative” a reconstruction should be labelled), especially as these reconstruction are utilized for public communication and educational purposes.
+Finally, classroom and outreach deployments must take into account pedagogical support: learners need step by step guidance and clear examples and models to follow. Without this, the tool’s complexity will be more of a barrier that slows students down instead of enabling them to understand and be creative.
+
+
+== Sustainability via 3D modeling ==
+Minimizing the need for real prototypes – Designers can do early-stage usability testing without creating a physical prototype by using 3D CAD models as virtual replicas, which reduces waste and material consumption.
+Early discovery of design flaws – Testing with virtual models can help designers see ergonomic or usability problems early on and can lower the chance of making defective items. By doing this, waste from discarded physical prototypes is reduced.
+Quick iteration with minimal environmental effect – Digital modifications to CAD models are almost instantaneous when compared to retooling or rebuilding physical prototypes. This speeds up the design cycle without requiring more materials.
+
+
+== Simulations ==
+In 3D modeling, simulations are digital processes that copy how things behave in the real world, in a virtual space. Without creating actual prototypes, it lets designers and animators test how objects move, interact, or react to forces. By recreating processes such as collisions, fluid movement, fabric draping, or particle motion, simulations help increase design accuracy, enhance visual effects, and save both time and materials.
+
+
+== See also ==
+
+
+== References ==
+
+
+== External links ==
+
+ Media related to 3D modeling at Wikimedia Commons

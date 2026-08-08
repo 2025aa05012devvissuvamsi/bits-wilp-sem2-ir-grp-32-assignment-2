@@ -1,0 +1,136 @@
+ACT-R (pronounced /ˌækt ˈɑr/; short for "Adaptive Control of Thought—Rational") is a cognitive architecture mainly developed by John Robert Anderson and Christian Lebiere at Carnegie Mellon University.  Like any cognitive architecture, ACT-R aims to define the basic and irreducible cognitive and perceptual operations that enable the human mind.  
+In theory, each task that humans can perform should consist of a series of these discrete operations. 
+Most of the ACT-R's basic assumptions are also inspired by the progress of cognitive neuroscience, and ACT-R can be seen and described as a way of specifying how the brain itself is organized in a way that enables individual processing modules to produce cognition.
+
+
+== Inspiration ==
+ACT-R has been inspired by the work of Allen Newell, and especially by his lifelong championing the idea of unified theories as the only way to truly uncover the underpinnings of cognition.
+In fact, Anderson usually credits Newell as the major source of influence over his own theory.
+
+
+== What ACT-R looks like ==
+Like other influential cognitive architectures (including Soar, CLARION,  and EPIC), the ACT-R theory has a computational implementation as an interpreter of a special coding language.  The interpreter itself is written in Common Lisp, and might be loaded into any of the Common Lisp language distributions.
+This means that any researcher may download the ACT-R code from the ACT-R website, load it into a Common Lisp distribution, and gain full access to the theory in the form of the ACT-R interpreter.
+Also, this enables researchers to specify models of human cognition in the form of a script in the ACT-R language.  The language primitives and data-types are designed to reflect the theoretical assumptions about human cognition. 
+These assumptions are based on numerous facts derived from experiments in cognitive psychology and brain imaging.
+Like a programming language, ACT-R is a framework: for different tasks (e.g., Tower of Hanoi, memory for text or for list of words, language comprehension, communication, aircraft controlling), researchers create "models" (i.e., programs) in ACT-R.
+These models reflect the modelers' assumptions about the task within the ACT-R view of cognition.  
+The model might then be run.
+Running a model automatically produces a step-by-step simulation of human behavior which specifies each individual cognitive operation (i.e., memory encoding and retrieval, visual and auditory encoding, motor programming and execution, mental imagery manipulation).  
+Each step is associated with quantitative predictions of latencies and accuracies. 
+The model can be tested by comparing its results with the data collected in behavioral experiments.
+In recent years, ACT-R has also been extended to make quantitative predictions of patterns of activation in the brain, as detected in experiments with fMRI.
+In particular, ACT-R has been augmented to predict the shape and time-course of the BOLD response of several brain areas, including the hand and mouth areas in the motor cortex, the left prefrontal cortex, the anterior cingulate cortex, and the basal ganglia.
+
+
+=== Brief outline ===
+ACT-R's most important assumption is that human knowledge can be divided into two irreducible kinds of representations: declarative and procedural. 
+Within the ACT-R code, declarative knowledge is represented in the form of chunks, i.e. vector representations of individual properties, each of them accessible from a labelled slot.
+Chunks are held and made accessible through buffers, which are the front-end of what are modules, i.e. specialized and largely independent brain structures.
+There are two types of modules:
+
+Perceptual-motor modules, which take care of the interface with the real world (i.e., with a simulation of the real world). The most well-developed perceptual-motor modules in ACT-R are the visual and the manual modules.
+Memory modules. There are two kinds of memory modules in ACT-R:
+Declarative memory, consisting of facts such as Washington, D.C. is the capital of United States, France is a country in Europe, or 2+3=5
+Procedural memory, made of productions. Productions represent knowledge about how we do things: for instance, knowledge about how to type the letter "Q" on a keyboard, about how to drive, or about how to perform addition.
+All the modules can only be accessed through their buffers. The contents of the buffers at a given moment in time represent the state of ACT-R at that moment. The only exception to this rule is the procedural module, which stores and applies procedural knowledge. It does not have an accessible buffer and is actually used to access other modules' contents.
+Procedural knowledge is represented in form of productions.  The term "production" reflects the actual implementation of ACT-R as a production system, but, in fact, a production is mainly a formal notation to specify the information flow from cortical areas (i.e. the buffers) to the basal ganglia, and back to the cortex.
+At each moment, an internal pattern matcher searches for a production that matches the current state of the buffers. Only one such production can be executed at a given moment. That production, when executed, can modify the buffers and thus change the state of the system. Thus, in ACT-R, cognition 
+unfolds as a succession of production firings.
+
+
+=== The symbolic vs. connectionist debate ===
+In the cognitive sciences, different theories are usually ascribed to either the "symbolic" or the "connectionist" approach to cognition. ACT-R clearly belongs to the "symbolic" field and is classified as such in standard textbooks and collections. Its entities (chunks and productions) are discrete and its operations are syntactical, that is, not referring to the semantic content of the representations but only to their properties that deem them appropriate to participate in the computation(s). This is seen clearly in the chunk slots and in the properties of buffer matching in productions, both of which function as standard symbolic variables.
+Members of the ACT-R community, including its developers, prefer to think of ACT-R as a general framework that specifies how the brain is organized, and how its organization gives birth to what is perceived (and, in cognitive psychology, investigated) as mind, going beyond the traditional symbolic/connectionist debate. None of this, naturally, argues against the classification of ACT-R as symbolic system, because all symbolic approaches to cognition aim to describe the mind, as a product of brain function, using a certain class of entities and systems to achieve that goal.
+A common misunderstanding suggests that ACT-R may not be a symbolic system because it attempts to characterize brain function. This is incorrect on two counts: First, all approaches to computational modeling of cognition, symbolic or otherwise, must in some respect characterize brain function, because the mind is brain function. And second, all such approaches, including connectionist approaches, attempt to characterize the mind at a cognitive level of description and not at the neural level, because it is only at the cognitive level that important generalizations can be retained.
+Further misunderstandings arise because of the associative character of certain ACT-R properties, such as chunks spreading activation to each other, or chunks and productions carrying quantitative properties relevant to their selection. None of these properties counter the fundamental nature of these entities as symbolic, regardless of their role in unit selection and, ultimately, in computation.
+
+
+=== Theory vs. implementation, and Vanilla ACT-R ===
+The importance of distinguishing between the theory itself and its implementation is usually highlighted by ACT-R developers.
+In fact, much of the implementation does not reflect the theory.  
+For instance, the actual implementation makes use of additional 'modules' that exist only for purely computational reasons, and are not supposed to reflect anything in the brain (e.g., one computational module contains the pseudo-random number generator used to produce noisy parameters, while another holds naming routines for generating data structures accessible through variable names).
+Also, the actual implementation is designed to enable researchers to modify the theory, e.g. by altering the standard parameters, or creating new modules, or partially modifying the behavior of the existing ones.
+Finally, while Anderson's laboratory at CMU maintains and releases the official ACT-R code, other alternative implementations of the theory have been made available. These alternative implementations include jACT-R  (written in Java by Anthony M. Harrison at the Naval Research Laboratory) and Python ACT-R (written in Python by Terrence C. Stewart and Robert L. West at Carleton University, Canada).
+Similarly, ACT-RN (now discontinued) was a full-fledged neural implementation of the 1993 version of the theory.  
+All of these versions were fully functional, and models have been written and run with all of them.
+Because of these implementational degrees of freedom, the ACT-R community usually refers to the "official", Lisp-based, version of the theory, when adopted in its original form and left unmodified, as "Vanilla ACT-R".
+
+
+== Applications ==
+Over the years, ACT-R models have been used in more than 700 different scientific publications, and have been cited in many more.
+
+
+=== Memory, attention, and executive control ===
+The ACT-R declarative memory system has been used to model human memory since its inception.  In the course of years, it has been adopted to successfully model a large number of known effects.  They include the fan effect of interference for associated information, primacy and recency effects for list memory, and serial recall.
+ACT-R has been used to model attentive and control processes in a number of cognitive paradigms.  These include the Stroop task, task switching, the psychological refractory period, and multi-tasking.
+
+
+=== Natural language ===
+A number of researchers have been using ACT-R to model several aspects of natural language understanding and production.  They include models of syntactic parsing, language understanding, language acquisition  and metaphor comprehension.
+
+
+=== Complex tasks ===
+ACT-R has been used to capture how humans solve complex problems like the Tower of Hanoi, or how people solve algebraic equations. It has also been used to model human behavior in driving and flying.
+With the integration of perceptual-motor capabilities, ACT-R has become increasingly popular as a modeling tool in human factors and human-computer interaction.  In this domain, it has been adopted to model driving behavior under different conditions, menu selection and visual search on computer application, and web navigation.
+
+
+=== Cognitive neuroscience ===
+More recently, ACT-R has been used to predict patterns of brain activation during imaging experiments.  In this field, ACT-R models have been successfully used to predict prefrontal and parietal activity in memory retrieval, anterior cingulate activity for control operations, and practice-related changes in brain activity.
+
+
+=== Education ===
+ACT-R has been often adopted as the foundation for cognitive tutors. These systems use an internal ACT-R model to mimic the behavior of a student and personalize his/her instructions and curriculum, trying to "guess" the difficulties that students may have and provide focused help.
+Such "Cognitive Tutors" are being used as a platform for research on learning and cognitive modeling as part of the Pittsburgh Science of Learning Center.  Some of the most successful applications, like the Cognitive Tutor for Mathematics, are used in thousands of schools across the United States.
+
+
+== Brief history ==
+
+
+=== Early years: 1973–1990 ===
+ACT-R is the ultimate successor of a series of increasingly precise models of human cognition developed by John R. Anderson.
+Its roots can be traced back to the original HAM (Human Associative Memory) model of memory, described by John R. Anderson and Gordon Bower in 1973.  The HAM model was later expanded into the first version of the ACT theory.   This was the first time the procedural memory was added to the original declarative memory system, introducing a computational dichotomy that was later proved to hold in human brain. The theory was then further extended into the ACT* model of human cognition.
+
+
+=== Integration with rational analysis: 1990–1998 ===
+In the late eighties, Anderson devoted himself to exploring and outlining a mathematical approach to cognition that he named Rational analysis.  The basic assumption of Rational Analysis is that cognition is optimally adaptive, and precise estimates of cognitive functions mirror statistical properties of the environment.   Later on, he came back to the development of the ACT theory, using the Rational Analysis as a unifying framework for the underlying calculations.  To highlight the importance of the new approach in the shaping of the architecture, its name was modified to ACT-R, with the "R" standing for "Rational" 
+In 1993, Anderson met with Christian Lebiere, a researcher in connectionist models mostly famous for  developing with Scott Fahlman the Cascade Correlation learning algorithm.  Their joint work culminated in the release of ACT-R 4.0. Thanks to Mike Byrne (now at Rice University), version 4.0 also included optional perceptual and motor capabilities, mostly inspired from the EPIC architecture, which greatly expanded the possible applications of the theory.
+
+
+=== Brain Imaging and Modular Structure: 1998–2015 ===
+After the release of ACT-R 4.0, John Anderson became more and more interested in the underlying neural plausibility of his life-time theory, and began to use brain imaging techniques pursuing his own goal of understanding the computational underpinnings of the human mind.
+The necessity of accounting for brain localization pushed for a major revision of the theory.  ACT-R 5.0 introduced the concept of modules, specialized sets of procedural and declarative representations that could be mapped to known brain systems.  In addition, the interaction between procedural and declarative knowledge was mediated by newly introduced buffers, specialized structures for holding temporarily active information (see the section above).  Buffers were thought to reflect cortical activity, and a subsequent series of studies later confirmed that activations in cortical regions could be successfully related to computational operations over buffers.
+A new version of the code, completely rewritten, was presented in 2005 as ACT-R 6.0. It also included significant improvements in the ACT-R coding language.  This included a new mechanism in ACT-R production specification called dynamic pattern matching.  Unlike previous versions which required the pattern matched by a production to include specific slots for the information in the buffers, dynamic pattern matching allows the slots to be matched to also be specified by the buffer contents.  A description and motivation for the ACT-R 6.0 is given in Anderson (2007).
+
+
+=== ACT-R 7.0: 2015-Present ===
+At the 2015 workshop, it was argued that software changes required an increment in the model numbering to ACT-R 7.0.  A major software change was removal of the requirement that chunks must be specified based on predefined chunk-types.  The chunk-type mechanism was not removed, but changed from being a required construct of the architecture to being an optional syntactic mechanism in the software.  This allowed for more flexibility in knowledge representation for modeling tasks that require learning novel information and extended the functionality provided through dynamic pattern matching now allowing models to create new "types" of chunks.  This also lead to a simplification of the syntax required for specifying the actions in a production because all the actions now have the same syntactic form.  The ACT-R software has also been subsequently updated to include a remote interface based on JSON RPC 1.0.  That interface was added to make it easier to build tasks for models and work with ACT-R from languages other than Lisp, and the tutorial included with the software has been updated to provide Python implementations for all of the example tasks performed by the tutorial models.
+
+
+=== Workshop and summer school ===
+In 1995, Carnegie Mellon University began hosting their Annual ACT-R Workshop and Summer School.  Their ACT-R Workshop is currently hosted at the annual MathPsych/ICCM Conference, and their Summer School is hosted on-campus with a virtual attendance option at Carnegie Mellon University.
+
+
+=== Spin-offs ===
+The long development of the ACT-R theory gave birth to a certain number of parallel and related projects.
+The most important ones are the PUPS production system, an initial implementation of Anderson's theory, later abandoned; and ACT-RN, a neural network implementation of the theory developed by Christian Lebiere.
+Lynne M. Reder, also at Carnegie Mellon University, developed SAC in the early 1990s, a model of conceptual and perceptual aspects of memory that shares many features with the ACT-R core declarative system, although differing in some assumptions.
+For his dissertation at Penn State University, Christopher L. Dancy developed, and successfully defended in 2014, ACT-R/Phi, an implementation of ACT-R with added physiological modules which enable ACT-R to interface with human physiological processes.
+A lightweight Python-based implementation of the working memory component of ACT-R, pyACTUp, was created by Don Morrison at Carnegie Mellon University. This library implements ACT-R as a unimodal supervised learning model for classification tasks.
+
+
+== Notes ==
+
+
+== References ==
+Anderson, J. R. (2007). How can the human mind occur in the physical universe? New York, NY: Oxford University Press. ISBN 0-19-532425-0.
+Anderson, J. R., Bothell, D., Byrne, M. D., Douglass, S., Lebiere, C., & Qin, Y . (2004). An integrated theory of the mind.  Psychological Review, 1036–1060.
+
+
+== External links ==
+Official ACT-R website –  with a lot of online material, including the source code, list of publications, and tutorials
+jACT-R –  a Java re-writing of ACT-R
+ACT-R: The Java Simulation & Development Environment –  another open-source Java re-implementation of ACT-R
+Python ACT-R –  a Python implementation of ACT-R
+pyactr –  another Python implementation of ACT-R
+gactar –  an open source tool for exploring ACT-R implementations

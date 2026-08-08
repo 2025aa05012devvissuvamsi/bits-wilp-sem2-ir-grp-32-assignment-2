@@ -1,0 +1,15 @@
+{
+  "seeds": [
+    "Artificial intelligence",
+    "Machine learning",
+    "Deep learning",
+    "Neural network",
+    "Natural language processing",
+    "Computer vision",
+    "Robotics"
+  ],
+  "max_depth": 1,
+  "max_pages": 50,
+  "near_dup_threshold": 0.85,
+  "total_processed": 50
+}

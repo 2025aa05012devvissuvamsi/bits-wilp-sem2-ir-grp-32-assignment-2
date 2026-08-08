@@ -1,0 +1,130 @@
+2D to 3D video conversion (also called 2D to stereo 3D conversion and stereo conversion) is the process of transforming 2D ("flat") film to 3D, which in almost all cases is stereo, so it is the process of creating imagery for each eye from one 2D image.
+
+
+== Overview ==
+2D to 3D conversion adds the binocular disparity depth cue to digital images perceived by the brain, thus, if done properly, greatly improving the immersive effect while viewing stereo video in comparison to 2D video. However, in order to be successful, the conversion should be done with sufficient accuracy and correctness: the quality of the original 2D images should not deteriorate, and the introduced disparity cue should not contradict other cues used by the brain for depth perception. If done properly and thoroughly, the conversion produces stereo video of similar quality to "native" stereo video which is shot in stereo and accurately adjusted and aligned in post-production.
+Two approaches to stereo conversion can be loosely defined: quality semiautomatic conversion for cinema and high-quality 3DTV, and low-quality automatic conversion for cheap 3DTV, VOD and similar applications.
+
+
+=== Re-rendering of computer-animated films ===
+Computer-animated 2D films made with 3D models can be re-rendered in stereoscopic 3D by adding a second virtual camera if the original data is still available. This is technically not a conversion; therefore, such re-rendered films have the same quality as films originally produced in stereoscopic 3D. Examples of this technique include the re-release of Toy Story and Toy Story 2. Revisiting the original computer data for the two films took four months, as well as an additional six months to add the 3D. However, not all CGI films are re-rendered for the 3D re-release because of the costs, time required, lack of skilled resources or missing computer data.
+
+
+== Importance and applicability ==
+With the increase of films released in 3D, 2D to 3D conversion has become more common. The majority of non-CGI stereo 3D blockbusters are converted fully or at least partially from 2D footage. Even Avatar, notable for its extensive stereo filming, contains several scenes shot in 2D and converted to stereo in post-production. Reasons for shooting in 2D instead of stereo can be financial, technical and sometimes artistic:
+
+Stereo post-production workflow is much more complex and not as well-established as 2D workflow, requiring more work and rendering.
+Professional stereoscopic rigs are much more expensive and bulky than customary monocular cameras. Some shots, particularly action scenes, can be only shot with relatively small 2D cameras.
+Stereo cameras can introduce various mismatches in stereo image (such as vertical parallax, tilt, color shift, reflections and glares in different positions) that should be fixed in post-production anyway because they ruin the 3D effect. This correction sometimes may have complexity comparable to stereo conversion.
+Stereo cameras can betray practical effects used during filming. For example, some scenes in the Lord of the Rings film trilogy were filmed using forced perspective to allow two actors to appear to be different physical sizes. The same scene filmed in stereo would reveal that the actors were not the same distance from the camera.
+By their very nature, stereo cameras have restrictions on how far the camera can be from the filmed subject and still provide acceptable stereo separation. For example, the simplest way to film a scene set on the side of a building might be to use a camera rig from across the street on a neighboring building, using a zoom lens. However, while the zoom lens would provide acceptable image quality, the stereo separation would be virtually nil over such a distance.
+Even in the case of stereo shooting, conversion can frequently be necessary. Besides hard-to-shoot scenes, there can be mismatches in stereo views that are too big to adjust, and it is simpler to perform 2D to stereo conversion, treating one of the stereo views as the original 2D source.
+
+
+== General problems ==
+Without respect to particular algorithms, all conversion workflows should solve the following tasks:
+
+Allocation of "depth budget" – defining the range of permitted disparity or depth, what depth value corresponds to the screen position (so-called "convergence point" position), the permitted distance ranges for out-of-the-screen effects and behind-the-screen background objects. If an object in stereo pair is in exactly the same spot for both eyes, then it will appear on the screen surface and it will be in zero parallax. Objects in front of the screen are said to be in negative parallax, and background imagery behind the screen is in positive parallax. There are the corresponding negative or positive offsets in object positions for left and right eye images.
+Control of comfortable disparity depending on scene type and motion – too much parallax or conflicting depth cues may cause eye-strain and nausea effects
+Filling of uncovered areas – left or right view images show a scene from a different angle, and parts of objects or entire objects covered by the foreground in the original 2D image should become visible in a stereo pair. Sometimes the background surfaces are known or can be estimated, so they should be used for filling uncovered areas. Otherwise the unknown areas must be filled in by an artist or inpainted, since the exact reconstruction is not possible.
+High quality conversion methods should also deal with many typical problems including:
+
+Translucent objects
+Reflections
+Fuzzy semitransparent object borders – such as hair, fur, foreground out-of-focus objects, thin objects
+Film grain (real or artificial) and similar noise effects
+Scenes with fast erratic motion
+Small particles – rain, snow, explosions and so on.
+
+
+== Quality semiautomatic conversion ==
+
+
+=== Depth-based conversion ===
+Most semiautomatic methods of stereo conversion use depth maps and depth-image-based rendering.
+The idea is that a separate auxiliary picture known as the "depth map" is created for each frame or for a series of homogenous frames to indicate depths of objects present in the scene. The depth map is a separate grayscale image having the same dimensions as the original 2D image, with various shades of gray to indicate the depth of every part of the frame. While depth mapping can produce a fairly potent illusion of 3D objects in the video, it inherently does not support semi-transparent objects or areas, nor does it represent occluded surfaces; to emphasize this limitation, depth-based 3D representations are often explicitly referred to as 2.5D.
+These and other similar issues should be dealt with via a separate method. 
+
+The major steps of depth-based conversion methods are:
+
+Depth budget allocation –  how much total depth in the scene and where the screen plane will be.
+Image segmentation, creation of mattes or masks, usually by rotoscoping. Each important surface should be isolated. The level of detail depends on the required conversion quality and budget.
+Depth map creation. Each isolated surface should be assigned a depth map. The separate depth maps should be composed into a scene depth map. This is an iterative process requiring adjustment of objects, shapes, depth, and visualization of intermediate results in stereo. Depth micro-relief, 3D shape is added to most important surfaces to prevent the "cardboard" effect when stereo imagery looks like a combination of flat images just set at different depths.
+Stereo generation based on 2D+Depth with any supplemental information like clean plates, restored background, transparency maps, etc. When the process is complete, a left and right image will have been created. Usually the original 2D image is treated as the center image, so that two stereo views are generated. However, some methods propose to use the original image as one eye's image and to generate only the other eye's image to minimize the conversion cost. During stereo generation, pixels of the original image are shifted to the left or to the right depending on depth map, maximum selected parallax, and screen surface position.
+Reconstruction and painting of any uncovered areas not filled by the stereo generator.
+Stereo can be presented in any format for preview purposes, including anaglyph.
+Time-consuming steps are image segmentation/rotoscoping, depth map creation and uncovered area filling. The latter is especially important for the highest quality conversion.
+There are various automation techniques for depth map creation and background reconstruction. For example, automatic depth estimation can be used to generate initial depth maps for certain frames and shots.
+People engaged in such work may be called depth artists.
+
+
+==== Multi-layering ====
+A development on depth mapping, multi-layering works around the limitations of depth mapping by introducing several layers of grayscale depth masks to implement limited semi-transparency. Similar to a simple technique, multi-layering involves applying a depth map to more than one "slice" of the flat image, resulting in a much better approximation of depth and protrusion. The more layers are processed separately per frame, the higher the quality of 3D illusion tends to be.
+
+
+=== Other approaches ===
+3D reconstruction and re-projection may be used for stereo conversion. It involves scene 3D model creation, extraction of original image surfaces as textures for 3D objects and, finally, rendering the 3D scene from two virtual cameras to acquire stereo video. The approach works well enough in case of scenes with static rigid objects like urban shots with buildings, interior shots, but has problems with non-rigid bodies and soft fuzzy edges.
+Another method is to set up both left and right virtual cameras, both offset from the original camera but splitting the offset difference, then painting out occlusion edges of isolated objects and characters. Essentially clean-plating several background, mid ground and foreground elements.
+Binocular disparity can also be derived from simple geometry.
+
+
+== Automatic conversion ==
+
+
+=== Depth from motion ===
+It is possible to automatically estimate depth using different types of motion. In case of camera motion, a depth map of the entire scene can be calculated. Also, object motion can be detected and moving areas can be assigned with smaller depth values than the background. Occlusions provide information on relative position of moving surfaces.
+
+
+=== Depth from focus ===
+Approaches of this type are also called "depth from defocus" and "depth from blur". On "depth from defocus" (DFD) approaches, the depth information is estimated based on the amount of blur of the considered object, whereas "depth from focus" (DFF) approaches tend to compare the sharpness of an object over a range of images taken with different focus distances in order to find out its distance to the camera. DFD only needs two or three at different focus to properly work, whereas DFF needs 10 to 15 images at least but is more accurate than the previous method.
+If the sky is detected in the processed image, it can also be taken into account that more distant objects, besides being hazy, should be more desaturated and more bluish because of a thick air layer.
+
+
+=== Depth from perspective ===
+The idea of the method is based on the fact that parallel lines, such as railroad tracks and roadsides, appear to converge with distance, eventually reaching a vanishing point at the horizon. Finding this vanishing point gives the farthest point of the whole image.
+The more the lines converge, the farther away they appear to be. So, for depth map, the area between two neighboring vanishing lines can be approximated with a gradient plane.
+
+
+== Conversion artifacts ==
+Cardboard effect is a phenomenon in which 3D objects located at different depths appear flat to the audience, as if they were made of cardboard, while the relative depth between the objects is preserved
+Edge sharpness mismatch - this artifact may appear due to a blurred depth map at the boundaries of objects. The border becomes precise in one view and blurred in another. The edge-sharpness mismatch artifact is typically caused by the following:
+Use of a “rubber sheet” technique, defined as warping the pixels surrounding the occlusion regions to avoid explicit occlusion filling. In such cases, the edges of the displacement map are blurred and the transition between foreground and background regions is smoothed. The region occupied by edge/motion blur is either “stretched” or “tucked,” depending on the direction of object displacement. Naturally, this approach leads to mismatches in edge sharpness between the views.
+Lack of proper treatment of semitransparent edges, potentially resulting in edge doubling or ghosting.
+Simple occlusion-filling techniques leading to stretching artifacts near object edges.
+Stuck to background objects - this error of "sticking" foreground objects to the background
+
+
+== 3D quality metrics ==
+
+
+=== PQM ===
+PQM mimic the HVS as the results obtained aligns very closely to the Mean Opinion Score (MOS) obtained from subjective tests. The PQM quantifies the distortion in the luminance, and contrast distortion using an approximation (variances) weighted by the mean of each pixel block to obtain the distortion in an image. This distortion is subtracted from 1 to obtain the objective quality score.
+
+
+=== HV3D ===
+HV3D quality metric has been designed having the human visual 3D perception in mind. It takes into account the quality of the individual right and left views, the quality of the cyclopean view (the fusion of the right and left view, what the viewer perceives), as well as the quality of the depth information.
+
+
+=== VQMT3D ===
+The VQMT3D project  includes several developed metrics for evaluating the quality of 2D to 3D conversion based on the cardboard effect, edge-sharpness mismatch, stuck-to-background objects, and comparison with the 2D version.
+
+
+== See also ==
+Autostereoscopy
+Crosstalk (electronics)
+Digital 3D
+Film colorization – many of the issues involved in 3D conversion, such as object edge identification/recognition, are also encountered in colorization
+Legend3D
+Lists of 3D films
+Stereoscopic video game – many S-3D video games do not actually render two images but employ 2D + depth rendering conversion techniques too
+Structure from motion
+2D-plus-depth
+3D display
+3D reconstruction from multiple images
+
+
+== References ==
+
+
+== Sources ==
+Mansi Sharma; Santanu Chaudhury; Brejesh Lall (2014). Kinect-Variety Fusion: A Novel Hybrid Approach for Artifacts-Free 3DTV Content Generation. In 22nd International Conference on Pattern Recognition (ICPR), Stockholm, 2014. doi:10.1109/ICPR.2014.395.
