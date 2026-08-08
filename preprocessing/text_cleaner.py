@@ -8,8 +8,10 @@ preprocessing strategies can be compared against each other
 
 import re
 
+import nltk
 from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer, WordNetLemmatizer
+
 
 def _ensure_nltk_data():
     """Download required NLTK corpora if not already present (e.g. on a
