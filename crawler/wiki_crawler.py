@@ -155,8 +155,11 @@ class WikiCrawler:
         max_pages budget before they're ever visited.
         progress_callback(msg: str) is optionally called for live UI updates (e.g. in Streamlit).
         """
+        # Only clear files this crawler owns — leave externally-ingested
+        # dataset files (see crawler/dataset_loader.py) untouched.
         for fname in os.listdir(self.raw_dir):
-            os.remove(os.path.join(self.raw_dir, fname))
+            if not fname.endswith("__dataset.txt"):
+                os.remove(os.path.join(self.raw_dir, fname))
 
         seed_queues = {s: deque([(s, 0, s)]) for s in self.seeds}  # (title, depth, seed_source)
         rotation = deque(self.seeds)
@@ -265,11 +268,23 @@ class WikiCrawler:
 
         meta_path = os.path.join(self.meta_dir, "metadata.csv")
         if self.metadata_rows:
+            # Preserve rows from externally-ingested datasets (they aren't
+            # produced by this crawl and would otherwise be wiped out).
+            preserved_rows = []
+            if os.path.exists(meta_path):
+                with open(meta_path, "r", newline="", encoding="utf-8") as f:
+                    for row in csv.DictReader(f):
+                        if str(row.get("raw_file", "")).endswith("__dataset.txt"):
+                            preserved_rows.append(row)
+
             keys = list(self.metadata_rows[0].keys())
+            all_rows = self.metadata_rows + [
+                {k: row.get(k, "") for k in keys} for row in preserved_rows
+            ]
             with open(meta_path, "w", newline="", encoding="utf-8") as f:
                 writer = csv.DictWriter(f, fieldnames=keys)
                 writer.writeheader()
-                writer.writerows(self.metadata_rows)
+                writer.writerows(all_rows)
 
         links_path = os.path.join(self.meta_dir, "links.csv")
         if self.link_rows:

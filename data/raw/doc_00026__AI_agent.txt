@@ -1,10 +1,10 @@
-In the context of generative artificial intelligence, AI agents (also referred to as compound AI systems, agentic AI, or AI tools) are a class of intelligent agents that can pursue goals, use tools, and take actions with varying degrees of autonomy. In practice, they usually operate within human-defined objectives, constraints, and available tools.
+An AI agent or agentic AI is an artificial intelligence program that can pursue goals, use software or other tools, and take actions with some level of autonomy. Agentic AI contrasts with tool AI, which performs a narrow, specified task such as answering questions (as with chatbots like ChatGPT) or traditional machine learning algorithms.
 
 
 == Overview ==
 There is no standard definition of what an AI agent is. Common attributes of AI agents include goal-directed behavior, natural language interfaces, the capacity to use external tools, and the ability to perform multi-step tasks. Their control flow is frequently driven by large language models (LLMs). Agent systems may also include memory components, planning logic, tool interfaces, and orchestration software for coordinating agent components. 
 A common application of AI agents is task automation: for example, booking travel plans based on a user's prompted request. 
-Companies such as Google, Microsoft and Amazon Web Services have offered platforms for deploying pre-built AI agents. Several protocols have been proposed for standardizing inter-agent communication, such as Agent2Agent, Gibberlink, and others. 
+Companies such as Google, Microsoft and Amazon Web Services have offered platforms for deploying pre-built AI agents. Several protocols have been proposed for standardizing inter-agent communication, such as Agent2Agent, Gibberlink, and others.
 In December 2025, Linux Foundation announced the formation of the Agentic AI Foundation (AAIF), with the goal of ensuring that agentic AI evolves transparently and collaboratively.
 
 

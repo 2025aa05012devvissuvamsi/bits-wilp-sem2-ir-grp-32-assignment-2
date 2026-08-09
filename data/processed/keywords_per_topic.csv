@@ -1,0 +1,106 @@
+group,term,mean_tfidf
+Artificial intelligence,film,0.15431332071439913
+Artificial intelligence,ai,0.14143969118502928
+Artificial intelligence,kubrick,0.12545232908286247
+Artificial intelligence,voice,0.08110668518507323
+Artificial intelligence,node,0.06676797449437995
+Artificial intelligence,data,0.06319624932201619
+Artificial intelligence,spielberg,0.06263711712022818
+Artificial intelligence,hal,0.06115628535691013
+Artificial intelligence,bowman,0.059483472714958234
+Artificial intelligence,bjp,0.05079149593192797
+Artificial intelligence,election,0.04907016836784294
+Artificial intelligence,storage,0.048720067232788676
+Artificial intelligence,clarke,0.048515251752349414
+Artificial intelligence,monolith,0.047469033721225684
+Artificial intelligence,path,0.04613842397328928
+Computer vision,image,0.29439893549920493
+Computer vision,object,0.25141921534803674
+Computer vision,point,0.1516291849003831
+Computer vision,vision,0.134019701284161
+Computer vision,stereo,0.12655834653862436
+Computer vision,depth,0.12543807072254634
+Computer vision,reconstruction,0.12427546731960197
+Computer vision,camera,0.12329367482542385
+Computer vision,pose,0.11128776999738012
+Computer vision,method,0.101698686827976
+Computer vision,displaystyle,0.10062122320530864
+Computer vision,feature,0.08120949241946444
+Computer vision,computer,0.07976946711182765
+Computer vision,contour,0.07647647235202727
+Computer vision,correspondence,0.06912390244856498
+Deep learning,ai,0.3756456461240001
+Deep learning,agent,0.13998706885362594
+Deep learning,human,0.09871652435514976
+Deep learning,act,0.0810836246931121
+Deep learning,model,0.08079566972205755
+Deep learning,code,0.07189786925652114
+Deep learning,system,0.06856996296315543
+Deep learning,bubble,0.0651971284503294
+Deep learning,deep,0.06283820659729764
+Deep learning,learning,0.061614784684617965
+Deep learning,language,0.06066879684142777
+Deep learning,openai,0.04917174352825643
+Deep learning,software,0.04631917778717636
+Deep learning,network,0.044378907810940456
+Deep learning,company,0.04348672267444481
+Machine learning,acm,0.17044967312029521
+Machine learning,aaai,0.14744276819798588
+Machine learning,learning,0.11460478728201108
+Machine learning,computing,0.1023171707700888
+Machine learning,adaline,0.0986128132620691
+Machine learning,journal,0.09390115108658749
+Machine learning,machine,0.07099044097193272
+Machine learning,classification,0.06997769007747645
+Machine learning,united,0.06657631307478737
+Machine learning,crisis,0.059803349070092354
+Machine learning,computer,0.058413528101495006
+Machine learning,mortgage,0.057747797244008324
+Machine learning,state,0.054266082831942765
+Machine learning,madaline,0.053636264864415806
+Machine learning,displaystyle,0.05263870242747842
+Natural language processing,ai,0.17646465291675162
+Natural language processing,goodwin,0.13324993212010405
+Natural language processing,model,0.1260969043336346
+Natural language processing,problem,0.11976648383543329
+Natural language processing,language,0.10953856423283018
+Natural language processing,word,0.10546255285244112
+Natural language processing,text,0.09977036006514092
+Natural language processing,modeling,0.08581239953032303
+Natural language processing,nlp,0.08462000384131252
+Natural language processing,complete,0.08132918371450655
+Natural language processing,natural,0.0635759773477722
+Natural language processing,sentence,0.06210683929548071
+Natural language processing,road,0.058107886552952015
+Natural language processing,poetry,0.055998915576258884
+Natural language processing,novel,0.05592478831532541
+Neural network,neuron,0.17659504095470815
+Neural network,neural,0.1379893733748637
+Neural network,network,0.13630405289064554
+Neural network,displaystyle,0.12683626390364433
+Neural network,function,0.11411231134457737
+Neural network,activation,0.08420627127842101
+Neural network,adaptive,0.0806870102216375
+Neural network,biological,0.07812965079344739
+Neural network,cybernetics,0.06799088206882789
+Neural network,mathbf,0.06631975306048901
+Neural network,bain,0.06572700696917094
+Neural network,potential,0.06486507149301496
+Neural network,cell,0.06478018265600166
+Neural network,layer,0.05950317471219713
+Neural network,control,0.058284068400888206
+Robotics,printing,0.14542986152268272
+Robotics,robot,0.12719403217073497
+Robotics,abb,0.11156505210731535
+Robotics,motor,0.09828203585255461
+Robotics,manufacturing,0.07375363498774516
+Robotics,neo,0.06226946126309792
+Robotics,art,0.06079729994973122
+Robotics,company,0.05841808934622947
+Robotics,material,0.058313932003573404
+Robotics,model,0.057368660520032144
+Robotics,image,0.054937703529390786
+Robotics,printer,0.05464320676958352
+Robotics,laser,0.054375060522407065
+Robotics,humanoid,0.05311368335267819
+Robotics,ai,0.05280554352928386
