@@ -42,9 +42,9 @@ with tab1:
         st.dataframe(df, hide_index=True, use_container_width=True)
         c1, c2 = st.columns(2)
         with c1:
-            st.image(os.path.join(FIGURES_DIR, "preprocessing_comparison.png"), use_container_width=True)
+            st.image(os.path.join(FIGURES_DIR, "preprocessing_comparison.png"))
         with c2:
-            st.image(os.path.join(FIGURES_DIR, "vocab_size_comparison.png"), use_container_width=True)
+            st.image(os.path.join(FIGURES_DIR, "vocab_size_comparison.png"))
     else:
         st.info("Run `python -m preprocessing.comparative_analysis` to generate this.")
 
@@ -53,7 +53,7 @@ with tab2:
     cv_csv = os.path.join(PROCESSED_DIR, "classification_cv_results.csv")
     if os.path.exists(cv_csv):
         st.dataframe(pd.read_csv(cv_csv), hide_index=True, use_container_width=True)
-        st.image(os.path.join(FIGURES_DIR, "confusion_matrix.png"), use_container_width=False)
+        st.image(os.path.join(FIGURES_DIR, "confusion_matrix.png"))
         report_path = os.path.join(PROCESSED_DIR, "classification_report.txt")
         if os.path.exists(report_path):
             with open(report_path, "r", encoding="utf-8") as f:
@@ -71,7 +71,7 @@ with tab3:
     ]:
         path = os.path.join(FIGURES_DIR, fname)
         if os.path.exists(path):
-            st.image(path, caption=caption, use_container_width=True)
+            st.image(path, caption=caption, use_column_width=True)
 
     st.subheader("Word clouds by topic")
     wordcloud_paths = sorted(glob.glob(os.path.join(FIGURES_DIR, "wordcloud_*.png")))
@@ -80,7 +80,7 @@ with tab3:
         for i, path in enumerate(wordcloud_paths):
             topic = os.path.basename(path).replace("wordcloud_", "").replace(".png", "").replace("_", " ")
             with cols[i % 2]:
-                st.image(path, caption=topic, use_container_width=True)
+                st.image(path, caption=topic, use_column_width=True)
     else:
         st.info("Run `python -m preprocessing.keyword_extraction` to generate word clouds.")
 
