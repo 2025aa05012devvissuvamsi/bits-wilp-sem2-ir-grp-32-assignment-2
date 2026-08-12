@@ -7,9 +7,69 @@ Streamlit app.
 
 **Live app:** https://bits-wilp-sem2-ir-grp-32-assignment-2-csmclagpjovo3yzjsj9lkr.streamlit.app/
 
-## Running it yourself
+## Running it in the BITS Virtual Lab (Fedora)
 
-**1. Install dependencies**
+The lab machine sometimes ships Python 3.9, but this project needs 3.11.
+Run these one at a time.
+
+**1. Check the Python version**
+
+```
+python3 --version
+```
+
+**2. Install Python 3.11** (safe to run even if you already have it)
+
+```
+sudo dnf install -y python3.11
+```
+
+**3. Install git** (safe to run even if you already have it)
+
+```
+sudo dnf install -y git
+```
+
+**4. Clone the repo**
+
+```
+mkdir -p /home/cloud
+cd /home/cloud
+git clone https://github.com/2025aa05012devvissuvamsi/bits-wilp-sem2-ir-grp-32-assignment-2.git
+cd bits-wilp-sem2-ir-grp-32-assignment-2
+```
+
+**5. Create and activate a virtual environment with Python 3.11**
+
+```
+python3.11 -m venv venv
+source venv/bin/activate
+python --version
+```
+
+The last command should print `3.11.x` — if it doesn't, stop and re-check
+step 2 before continuing.
+
+**6. Install dependencies**
+
+```
+pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+**7. Download NLTK data** (one-time)
+
+```
+python -c "import nltk; nltk.download('stopwords'); nltk.download('wordnet'); nltk.download('omw-1.4')"
+```
+
+**8. Run the app**
+
+```
+streamlit run app/app.py
+```
+
+## Running it locally (Windows / Mac)
 
 ```
 python -m venv venv
@@ -17,23 +77,13 @@ venv\Scripts\activate        (Windows)
 source venv/bin/activate     (Mac/Linux)
 
 pip install -r requirements.txt
-```
-
-**2. One-time download of NLTK data** (needed for stopwords/lemmatization)
-
-```
 python -c "import nltk; nltk.download('stopwords'); nltk.download('wordnet'); nltk.download('omw-1.4')"
-```
-
-**3. Start the app**
-
-```
 streamlit run app/app.py
 ```
 
-That opens the Dashboard. Everything else — crawling, indexing, search,
-ranking, recommendations, and evaluation — is done from the pages in the
-sidebar; nothing else needs to be run separately.
+Either way, this opens the Dashboard. Everything else — crawling,
+indexing, search, ranking, recommendations, and evaluation — is done
+from the pages in the sidebar; nothing else needs to be run separately.
 
 If this is a fresh checkout and there's no data yet, the Dashboard will
 tell you to run a crawl from the **Crawler** page first — that also
