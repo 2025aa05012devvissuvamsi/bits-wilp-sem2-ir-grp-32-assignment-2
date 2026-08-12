@@ -1,10 +1,15 @@
 # IR Assignment 2 — Information Retrieval System
 
-An end-to-end IR pipeline over a Wikipedia-crawled corpus: crawling ->
-text preprocessing/mining -> indexing -> search & ranking (PageRank/HITS)
--> recommendation -> evaluation, wired into a Streamlit application.
+A small end-to-end information retrieval system: it crawls Wikipedia,
+cleans and studies the text, builds a search index, ranks and recommends
+documents, and evaluates how well all of that works — all through a
+Streamlit app.
 
-## 1. Install dependencies
+**Live app:** https://bits-wilp-sem2-ir-grp-32-assignment-2-csmclagpjovo3yzjsj9lkr.streamlit.app/
+
+## Running it yourself
+
+**1. Install dependencies**
 
 ```
 python -m venv venv
@@ -14,29 +19,27 @@ source venv/bin/activate     (Mac/Linux)
 pip install -r requirements.txt
 ```
 
-First run also needs a couple of NLTK corpora (one-time download):
+**2. One-time download of NLTK data** (needed for stopwords/lemmatization)
 
 ```
 python -c "import nltk; nltk.download('stopwords'); nltk.download('wordnet'); nltk.download('omw-1.4')"
 ```
 
-## 2. Run the app
-
-From the **project root**:
+**3. Start the app**
 
 ```
 streamlit run app/app.py
 ```
 
-This opens the Dashboard. Everything else — crawling, indexing, search,
-ranking, recommendations, and evaluation — is driven from the sidebar
-pages; no separate scripts need to be run manually.
+That opens the Dashboard. Everything else — crawling, indexing, search,
+ranking, recommendations, and evaluation — is done from the pages in the
+sidebar; nothing else needs to be run separately.
 
-If `data/metadata/metadata.csv` doesn't exist yet (fresh checkout), the
-Dashboard will prompt you to run a crawl from the **Crawler** page first;
-that action also builds the index automatically.
+If this is a fresh checkout and there's no data yet, the Dashboard will
+tell you to run a crawl from the **Crawler** page first — that also
+builds the search index automatically.
 
-## Project layout
+## What's in the project
 
 ```
 crawler/        Wikipedia crawler (multi-seed, round-robin BFS, retry/backoff, dedup)
